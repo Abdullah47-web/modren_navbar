@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    nav{
+        height: 400px;
+        width: 100%;
+        background-color: black;
+        transform: translateY(-100%);
+        transition: 1s ease all;
+    }
+    button{
+        padding: 4px 8px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        transition: 500ms ease all;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    botton:hover{
+        border-color: grey;
+        color: white;
+
+    }
+    .show{
+        transform: translateY(0);
+    }
+
+</style>
+
+<body>
+
+    <button onclick="toggleNavbar()">=</button>
+<nav>
+    <button onclick="toggleNavbar()">X</button>
+</nav>
+
+
+<script>
+
+    function toggleNavbar() {
+        let navbar = document.querySelector("nav")
+        navbar.classList.toggle("show")
+    }
+</script>
+
+</body>
+</html>
